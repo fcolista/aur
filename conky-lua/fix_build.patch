@@ -1,0 +1,11 @@
+--- orig/cmake/ConkyPlatformChecks.cmake	2015-12-03 12:52:37.391221762 +0200
++++ new/cmake/ConkyPlatformChecks.cmake	2015-12-03 12:53:30.102200472 +0200
+@@ -249,7 +249,7 @@
+ 	endif(X11_FOUND)
+ endif(BUILD_X11)
+ 
+-pkg_search_module(LUA REQUIRED lua5.2 lua-5.2 lua>=5.1 lua5.1 lua-5.1)
++pkg_search_module(LUA REQUIRED lua=5.1 lua5.1 lua-5.1)
+ set(conky_libs ${conky_libs} ${LUA_LIBRARIES})
+ set(conky_includes ${conky_includes} ${LUA_INCLUDE_DIRS})
+ link_directories(${LUA_LIBRARY_DIRS})
